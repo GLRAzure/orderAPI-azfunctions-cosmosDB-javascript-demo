@@ -52,4 +52,5 @@ once the functions are created you can copy the code from the JavaScript files i
 
 ## Step 4: Test the Functions
 
-I recomend using a tool like postman to test the functions, in this repository you can find a collection of postman scripts that can be used to test the functions.
+I recomend using a tool like postman to test the functions, in this repository you can find a collection of postman scripts that can be used to test the functions: https://github.com/GLRAzure/orderAPI-azfunctions-cosmosDB-javascript-demo/blob/master/OrdersDemo.postman_collection.json
+
