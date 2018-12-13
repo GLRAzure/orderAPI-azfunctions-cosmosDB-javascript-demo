@@ -1,12 +1,12 @@
 const CosmosClient = require("@azure/cosmos").CosmosClient; 
 
 module.exports = async function (context, req) {
+    
+    var CosmosDb_Endpoint = "YOUR_COSMOS_DB_URI";
+    var CosmosDb_Key = "YOUR_COSMOS_DB_PRIMARY_KEY";
 
-    var CosmosDb_Endpoint = "https://ordersdemodb.documents.azure.com:443";
-    var CosmosDb_Key = "gWzgiEjOGhJykW2DMpQhtRIX7FEcIZ04Ik2JGQbELw47VPdZquN9zueqPdsgoYGdGXP6Vuuv9a2EfG9LDLbD0g==";
-
-    var databaseId = "Orders"
-    var collectionId = "Cart"
+    var databaseId = "YOUR_COSMOS_DB_DATABASE_NAME";
+    var collectionId = "YOUR_COSMOS_DB_COLLECTION_NAME";
 
     var client = new CosmosClient({ endpoint: CosmosDb_Endpoint, auth: { masterKey: CosmosDb_Key }});
 
