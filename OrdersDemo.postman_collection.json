@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "4b40cc2e-53d3-4378-81b4-090bf48d2cb5",
+		"name": "OrdersDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Order by OrderId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://ordersdbdemo.azurewebsites.net/api/getOrder?orderId=12345",
+					"protocol": "https",
+					"host": [
+						"ordersdbdemo",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"getOrder"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"orderId\": 1234567890,\n\t\"shopperName\":\"Paul Riviera\",\n\t\"shopperEmail\":\"parivier@microsoft.com\",\n\t\"contents\": [],\n\t\"orderCompleted\":false\n} "
+				},
+				"url": {
+					"raw": "https://ordersdbdemo.azurewebsites.net/api/createOrder",
+					"protocol": "https",
+					"host": [
+						"ordersdbdemo",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"createOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item to Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productID\": 34,\n\t\"productName\":\"SuperWidget\",\n\t\"quantity\": 1\n}"
+				},
+				"url": {
+					"raw": "https://ordersdbdemo.azurewebsites.net/api/addItemToOrder?orderId=1234567890",
+					"protocol": "https",
+					"host": [
+						"ordersdbdemo",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"addItemToOrder"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Item from Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://ordersdbdemo.azurewebsites.net/api/removeItemFromOrder?orderId=12345&productId=5",
+					"protocol": "https",
+					"host": [
+						"ordersdbdemo",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"removeItemFromOrder"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "12345"
+						},
+						{
+							"key": "productId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://ordersdbdemo.azurewebsites.net/api/removeOrder?orderId=12121212",
+					"protocol": "https",
+					"host": [
+						"ordersdbdemo",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"removeOrder"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "12121212"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
